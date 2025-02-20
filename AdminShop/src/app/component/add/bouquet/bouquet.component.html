@@ -1,0 +1,91 @@
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2"></div>
+  </div>
+  <!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content" style="padding-left: 500px">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">From Add Bouquet</h3>
+          <a href="" style="padding-left: 280px;" [routerLink]="['/admin/bouquet']">Back</a>
+        </div>
+        <!--  form add table bouquet -->
+        <form action="" [formGroup]="addBouquetForm" (ngSubmit)="save()">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="inputName">Name Bouquet</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="bouquetName"
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputDescription">Description</label>
+              <textarea
+                class="form-control"
+                rows="4"
+                formControlName="description"
+              ></textarea>
+            </div>
+            <div class="form-group">
+              <label for="inputStatus">Category Name</label>
+              <select class="form-control custom-select" formControlName="categoryId">
+                <ng-container *ngIf="category != null">
+                  <option *ngFor="let cate of category"
+                  value="{{cate.categoryId}}">{{cate.categoryName}}</option>
+                </ng-container>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="inputClientCompany">Price</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="price"
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputProjectLeader">Quantity</label>
+              <input
+                type="number"
+                class="form-control"
+                formControlName="quantity"
+              />
+            </div>
+            <div class="form-group">
+              <label for="inputName">Status</label>
+
+              <input
+                type="checkbox"
+                class="form-control"
+                formControlName="status"
+
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="submit"
+                class="form-control"
+                value="SAVE"
+                style="color: #ffff; background-color: blue"
+              />
+            </div>
+          </div>
+        </form>
+
+        <!--end form  -->
+        <!-- /.card-body -->
+      </div>
+
+      <!-- /.card -->
+    </div>
+  </div>
+</section>
+<!-- /.content -->

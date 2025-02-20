@@ -1,0 +1,483 @@
+<div class="hold-transition sidebar-mini layout-fixed">
+  <div class="wrapper">
+
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+      <img class="animation__shake" src="assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a routerLinkActive="selected" [routerLink]="['/admin/dashboard']" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a routerLinkActive="selected" [routerLink]="['/admin/contact']" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <!-- Messages Dropdown Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link" data-toggle="dropdown" href="#">
+            <i class="far fa-comments"></i>
+            <span class="badge badge-danger navbar-badge">3</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="assets/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                    <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">Call me whenever you can...</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="assets/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    John Pierce
+                    <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">I got your message bro</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <!-- Message Start -->
+              <div class="media">
+                <img src="assets/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Nora Silvester
+                    <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                  </h3>
+                  <p class="text-sm">The subject goes here</p>
+                  <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+              <!-- Message End -->
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="index3.html" class="brand-link">
+        <img src="assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">ADMIN AKTT</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Name Login</a>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+            <li class="nav-item menu-open">
+              <a href="#" class="nav-link active">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                  <i class="right fas fa-angle-left"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/dashboard']" class="nav-link active">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Dashboard 1</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Invoice
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/order']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Order</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/cart']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Cart</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/delivery']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Delivery</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/event']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Revenue</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- form thêm  -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Forms Add
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/account']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Account</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/bouquet']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/categorybouquet']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Category Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/event1']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/event2']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/add/role']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Role</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Form chỉnh sửa -->
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-edit"></i>
+                <p>
+                  Forms Edit
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/account']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Account</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/bouquet']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/categorybouquet']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Category Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/event']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/event']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/edit/role']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Role</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-table"></i>
+                <p>
+                  Tables
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/account']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Account</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Bouquet Images</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Category Bouquet</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Event</p>
+                  </a>
+                </li>
+
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Contact</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Comment</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Role</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a routerLinkActive="selected" [routerLink]="['/admin/calendar']" class="nav-link">
+                <i class="nav-icon far fa-calendar-alt"></i>
+                <p>
+                  Calendar
+                  <span class="badge badge-info right">2</span>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLinkActive="selected"  class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Images
+                </p>
+                <i class="fas fa-angle-left right"></i>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Add Image</p>
+
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Edit Image</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-envelope"></i>
+                <p>
+                  Mail
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/mail']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>New Mail</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/mail']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Mailing List</p>
+                  </a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon far fa-plus-square"></i>
+                <p>
+                  Commnets
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>
+                      Comment List
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Document
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a routerLinkActive="selected" [routerLink]="['/admin/...']" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>Product manual</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-cog"></i>
+                <p>
+                  Setting Account
+                  <i class="fas fa-angle-left right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>
+                      Login
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>
+                      Register
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>
+                      Profile
+                    </p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <router-outlet></router-outlet>
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+      <strong>Copyright &copy;<a href="https://adminlte.io">AKTT TEAM</a>.</strong>
+      
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+</div>

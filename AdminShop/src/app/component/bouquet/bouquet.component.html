@@ -1,0 +1,106 @@
+ <!-- Content Header (Page header) -->
+ <section class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1>List Bouquets</h1>
+      </div>
+
+    </div>
+  </div><!-- /.container-fluid -->
+</section>
+
+<!-- Main content -->
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+
+                <input type="text" placeholder="Input Code Bouquet" [(ngModel)]="keywordBouquetId">
+                <input type="submit" value="Search" style="margin-right: 20px;" (click)="searchKeywordBouquetId()">
+
+
+                <select name="" id="" style="margin-right: 20px;" [(ngModel)]="activeBouquet" (change)="selectBouquet($event)">
+                  <option value="true">Action</option>
+                  <option value="false">Stop Active</option>
+                </select>
+
+
+
+              <select name="" id="" style="margin-right: 20px;" (change)="selectCategory($event)">
+                <option value="-1">All</option>
+                <ng-container *ngIf="category != null">
+                  <option *ngFor="let cate of category"
+                  value="{{cate.categoryId}}">{{cate.categoryName}}</option>
+                </ng-container>
+
+              </select>
+
+              <a [routerLink]="['/admin/add/bouquet']">
+                <button style="color:blue;background-color: #fdfdfd;border-color: 1px solid #0000;padding: 10px; border-radius: 5%;">ADD BOUQUET</button>
+              </a>
+
+
+          </div>
+
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example2" class="table table-bordered table-hover">
+              <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Event Price</th>
+                <th>Original Price</th>
+                <th>Quantity</th>
+                <th>Created</th>
+                <th>Status</th>
+                <th>Category Id</th>
+                <th>Category Name</th>
+                <th>Action</th>
+              </tr>
+              <!-- vong lap danh sach san pham -->
+              <ng-container *ngIf="bouquet != null">
+                <tr *ngFor="let bq of bouquet">
+                  <td>{{bq.bouquetId}}</td>
+                  <td>{{bq.bouquetName}}</td>
+                  <td>{{bq.price}}</td>
+                  <td>{{bq.eventPrice}}</td>
+                  <td>{{bq.secondPrice}}</td>
+                  <td>{{bq.quantity}}</td>
+                  <td>{{bq.created}}</td>
+                  <td>{{bq.status}}</td>
+                  <td>{{bq.categoryId}}</td>
+                  <td>{{bq.categoryName}}</td>
+
+                  <td>
+                    <a class="btn btn-primary btn-sm"[routerLink]="['/admin/edit/bouquet',{bouquetId: bq.bouquetId}]">
+                        <i class="fas fa-folder">
+                        </i>
+                        View
+                    </a>
+                    <!-- <a class="btn btn-info btn-sm" [routerLink]="['/admin/images',{boquetId: bq.bouquetId}]">
+                        <i class="fas fa-pencil-alt">
+                        </i>
+                        Add IMG
+                    </a> -->
+                </td>
+              </tr>
+              </ng-container>
+
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container-fluid -->
+</section>
+<!-- /.content -->
